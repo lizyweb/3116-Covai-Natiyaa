@@ -1,0 +1,571 @@
+:root {
+  --brand: #ff2143;
+  --sub: black;
+  --body: #516171;
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Path */
+.banner-area {
+  position: relative;
+  min-height: 300px;
+  color: #fff;
+  background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(139, 0, 0, 0.3)), url("../img/image-1/5.jpg") fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+@media (max-width: 767px) {
+  .banner-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-title {
+    font-size: 32px;
+  }
+}
+
+.banner-text {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.banner-heading {
+  text-align: left;
+}
+
+.breadcrumb {
+  padding: 0;
+  background: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  justify-content: left;
+}
+
+.breadcrumb li a,
+.breadcrumb .breadcrumb-item,
+.breadcrumb li a:focus {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  color: #fff;
+}
+
+/*------------------- gallery -------------------------  */
+
+/* Image Gallery */
+.untree_co-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  .untree_co-section {
+    padding: 50px 0;
+  }
+}
+
+.untree_co-section .heading h3 {
+  font-size: 35px;
+  color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .untree_co-section .heading {
+    font-size: 20px;
+  }
+}
+
+.untree_co-section .heading strong {
+  font-weight: 700;
+}
+
+.item {
+  border: none;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: block;
+}
+
+.item a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  display: block;
+}
+
+.item a img {
+  position: relative;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s all ease-in-out;
+  -o-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+.item .item-wrap {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+}
+
+.item .item-wrap:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s all ease-in-out;
+  -o-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+.item .item-wrap>i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  color: #ffffff;
+  font-size: 1.7rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.item .item-wrap:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item .item-wrap:hover i {
+  margin-top: 0px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.item-wrap:hover img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: .3s all ease-in-out;
+  -o-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+/* ------------------------  */
+.s-one {
+  font-size: 32px;
+  /* color: var(--brand); */
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.s-one::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: black;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.s-one::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 10px;
+  background: var(--brand);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+/* ==========================  */
+/* Make the map and contact info the same height */
+.map-container,
+.contact-info-container {
+  height: 100%;
+}
+
+/* Align the contact information in one column (single item per row) */
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact-info-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+  /* Ensure each item takes up full width */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Adjust to fill entire row */
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--sub);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon i {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contact-text {
+  padding-left: 15px;
+}
+
+.contact-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.contact-text p {
+  font-size: 16px;
+  color: #454545;
+}
+
+/* Styling for social icons */
+.contact-social a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: var(--sub);
+}
+
+.contact-social a:hover {
+  color: #719a0a;
+}
+
+/* Ensure map has proper sizing and responsiveness */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+/* =====================  */
+
+/* Video */
+
+section.video-3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #172238;
+  padding: 120px 0px;
+}
+
+section.video-3 .left-content {
+  color: #fff;
+}
+
+section.video-3 .left-content span {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+section.video-3 .left-content h4 {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+section.video-3 .left-content h4 em {
+  font-style: normal;
+  color: #f5a425;
+}
+
+section.video-3 .left-content .main-button {
+  margin-top: 30px;
+}
+
+.video-item-3 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0px auto 0;
+}
+
+@media screen and (max-width: 767px) {
+
+  section.video-3 .left-content {
+    margin-bottom: 45px;
+  }
+
+  section.video-3 .first-item .first-content h4,
+  section.video-3 .second-item .second-content h4 {
+    text-align: center;
+  }
+
+}
+
+.video-item-3 figure {
+  position: relative;
+  width: 100%;
+  font-size: 0;
+}
+
+.video-item-3 figure img {
+  width: 100%;
+}
+
+.video-item-3 figure a:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  margin-top: -32.5px;
+  margin-left: -32.5px;
+  border-radius: 50%;
+  background-color: #f5a425;
+  z-index: 10;
+}
+
+.video-item-3 figure a:after {
+  content: '';
+  position: absolute;
+  bottom: 27.5px;
+  right: 20px;
+  margin-top: -12.5px;
+  margin-left: -7px;
+  border: solid 13px transparent;
+  border-left: solid 20px;
+  border-left-color: #fff;
+  z-index: 10;
+}
+
+.video-item-3 figure a:hover:before {
+  background-color: #f5a425;
+}
+
+.video-item-3 .video-caption-3 {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(250, 250, 250, 0.75);
+  height: 80px;
+  width: 100%;
+  padding: 27px 30px;
+  bottom: 0;
+}
+
+.video-item-3 .video-caption-3 h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ==================== courses strat ====================================  */
+
+.courses-area .properties.properties2 {
+  margin-bottom: 30px
+}
+
+.courses-area .properties__card {
+  box-shadow: 0px 6px 6px 0px rgba(2, 25, 65, 0.08);
+  border-radius: 10px;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s
+}
+
+.courses-area .properties__card:hover {
+  box-shadow: 0px 8px 8px 0px rgba(2, 25, 65, 0.5)
+}
+
+.courses-area .properties__img img {
+  width: 100%;
+  height:300px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  object-fit: cover;
+  
+}
+
+.courses-area .properties__caption {
+  padding: 29px 20px 20px 20px
+}
+
+.courses-area .properties__caption h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  border-bottom:2px solid grey;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .courses-area .properties__caption h3 {
+    font-size: 16px;
+  }
+}
+
+.courses-area .properties__caption h3 a {
+  text-decoration: underline transparent;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .courses-area .properties__caption P span {
+    font-size: 12px
+  }
+}
+
+.courses-area .properties__footer {
+  margin-bottom: 22px;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s
+}
+.properties__footer i{
+  padding: 10px 20px;
+}
+
+@media (max-width: 575px) {
+  .courses-area .properties__footer {
+    padding: 19px 10px 20px 12px
+  }
+}
+
+
+ .border-btn2 {
+  color: #fff;
+  background: var(--brand);
+  padding:10px 20px;
+  border-radius: 30px;
+}
+.border-btn2:hover{
+  color: white;
+} 
+/* ===========================  */
+
+/*
+---------------------------------------------
+apply now
+---------------------------------------------
+*/
+
+
+.scroll-to-section-3 a{
+  color: var(--brand);
+  background-color: rgb(255, 255, 255,.6);
+  width: fit-content;
+  padding: 10px 20px;
+  
+}
+
+.scroll-to-section-3:hover a{
+  color: white;
+  background-color: rgb(0, 0, 0,.5);
+  border: 1px solid black;
+}
+.classy-navbar .nav-brand {
+  margin-right: 0px !important;
+}
+.item-33 {
+  background-color: #B8001F;
+  border-radius: 20px;
+  padding: 20px;
+margin-top: 20px;
+}
+.item-33  h3{
+  color: white;
+}
+.item-33  ul li{
+  color: white;
+  padding: 3px 0px;
+}
+.item-33  ul li i{
+  color: white;
+  padding-right: 10px;
+}
+.rules-content{
+  padding: 30px;
+  margin-top: 20px;
+  background-color: #522258;
+  border-radius: 20px;
+}
+.rules-content h3{
+  color: white;
+  margin-bottom: 15px;
+}
+.rules-content ul li{
+  color: white;
+  padding: 10px 0px;
+  
+}
+.rules-content ul li i{
+  padding-right: 10px;
+}
